@@ -1,0 +1,102 @@
+/*The * selector targets all elements in the HTML document.
+padding: 0; and margin: 0; sets the padding and margin of all elements to zero.
+box-sizing: border-box; ensures that padding and border are included in the element's total width and height.*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*This targets the body element.
+background-color: crimson; sets the background color of the entire page to crimson.
+font-family: sans-serif; sets the default font family for the entire page to sans-serif.*/
+body {
+    background-color: crimson;
+    font-family: sans-serif;
+}
+
+/*This targets the element with the id Accordian.
+margin: 100px auto; sets a top and bottom margin of 100px and left and right margin to auto, centering the element horizontally.
+width: 600px; sets the width of the Accordian element to 600 pixels.*/
+
+#Accordian {
+    margin: 100px auto;
+    width: 600px;
+}
+
+
+/*This targets the li elements within the Accordian.
+list-style: none; removes the default list-style (bullet points) from the list items.
+width: 100%; sets the width of the list items to 100% of their container.
+margin-bottom: 10px; adds a bottom margin of 10 pixels to each list item.
+background: #fff; sets the background color of each list item to white.
+padding: 10px; adds 10 pixels of padding inside each list item.*/
+#Accordian li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+}
+
+
+/*This targets the label elements within the Accordian list items.
+padding: 10px; adds 10 pixels of padding inside each label.
+display: flex; sets the display property to flex.
+justify-content: space-between; positions the content with space between them.
+align-items: center; aligns the items along the center vertically.
+font-size: 18px; sets the font size to 18 pixels.
+font-weight: 500; sets the font weight to 500 (bold).
+color: dodgerblue; sets the text color to dodger blue.
+cursor: pointer; changes the cursor to a pointer when hovering over the label. */
+#Accordian li label {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+
+/*This targets the span elements within the label elements of the Accordian list items.
+transform: rotate(90deg); rotates the span element by 90 degrees.
+font-size: 22px; sets the font size to 22 pixels.
+color: dodgerblue; sets the text color to dodger blue.*/
+#Accordian li label span {
+    transform: rotate(90deg); 
+    font-size: 22px;
+    color: dodgerblue;
+}
+
+/*This targets the input elements of type radio that immediately follow a label element within the Accordian.
+display: none; hides the radio buttons.
+*/
+#Accordian label+input[type="radio"] {
+    display: none;
+}
+
+/*This targets the elements with the class content within the Accordian.
+padding: 0 10px; adds 0 pixels of padding on the top and bottom and 10 pixels of padding on the left and right.
+line-height: 26px; sets the line height to 26 pixels.
+max-height: 0; sets the maximum height of the content to 0, hiding it initially.
+overflow: hidden; hides any content that overflows the container.
+transition: max-height 0.5s; applies a transition effect to the max-height property over 0.5 seconds.*/
+#Accordian .content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+/*This targets the content elements that immediately follow a checked input of type radio within the Accordian.
+max-height: 400px; sets the maximum height of the content to 400 pixels when the corresponding radio button is checked, 
+revealing it with a smooth transition.*/
+#Accordian label+input[type="radio"]:checked+.content {
+    max-height: 400px;
+}
