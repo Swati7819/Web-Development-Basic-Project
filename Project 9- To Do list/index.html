@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+
+<body>
+    <h1>TO DO LIST</h1>
+    <label for="todo">
+        Task : <input type="text" id="todo" placeholder="Enter your task here">
+    </label>
+
+    <p><button id="add">Add Task</button></p>
+    <p><button id="delete">Delete Task</button></p>
+
+    <ul id="taskList">
+        <!-- Tasks will be added here -->
+    </ul>
+
+    <script>
+        let addBtn = document.getElementById("add");
+        let taskInput = document.getElementById('todo');
+        let taskList = document.getElementById('taskList');
+
+        addBtn.addEventListener('click', () => {
+            let taskText = taskInput.value;
+            if (taskText.trim() !== "") {
+                let taskItem = document.createElement('li');
+                taskItem.textContent = taskText;
+                taskList.appendChild(taskItem);
+                taskInput.value = ''; // Clear the input field
+            } else {
+                alert("Please enter a task!");
+            }
+        });
+
+        let delBtn = document.getElementById("delete");
+        delBtn.addEventListener('click', () => {
+            let tasks = taskList.querySelectorAll('li');
+            if (tasks.length > 0) {
+                let lastTask = tasks[tasks.length - 1];
+                taskList.removeChild(lastTask);
+            } else {
+                alert("No tasks to delete!");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
