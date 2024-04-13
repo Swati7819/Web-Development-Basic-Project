@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A9A9A9;
+}
+
+main{
+    height: 800px;
+    width: 800px;
+    background-color: white;
+    
+    
+
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 60px;
+    height: 500px;
+   
+
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    /* column-gap: 10%;
+    row-gap: 40%; */
+    /* background-color: brown; */
+    height: 50%;
+    align-items: center;
+
+
+}
+
+.btn{
+    height: 40px;
+    width: 100px;
+    margin-left: 80%;
+    background-color: red;
+    color: white;
+}
+
+[type="file"]{
+    text-align: center;
+}
+

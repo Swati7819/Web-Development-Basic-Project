@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="text">Job Application <span>(Web)</span></h1>
+
+        <div class="main-container">
+            <section class="container">
+                <div>
+                    <label for="first">First Name
+                        <br><input type="text" id="first" size="40" style="height: 40px;">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="first">Last Name
+                        <br><input type="text" id="first" size="40" style="height: 40px;">
+                    </label>
+                </div>
+
+            </section>
+
+            <section class="container">
+                <div>
+                    <label for="first">Email
+                        <br><input type="email" id="first" size="40" style="height: 40px;">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="job">Job Title</label>
+                    <br>
+                    <select name="cars" id="job" size="1" style="height: 43px; width: 340px;">
+                        <!-- <option value="-">Select</option> -->
+                        <option value="f">Frontend Developer</option>
+                        <option value="b">Backend Developer</option>
+                        <option value="a">App Developer</option>
+                        <option value="ml">ML Developer</option>
+                    </select>
+                </div>
+
+            </section>
+
+            <section class="container">
+                <div>
+                    <label for="address">Address</label><br>
+                    <textarea id="address" name="message" rows="4" cols="95"></textarea>
+
+                </div>
+            </section>
+
+            <section class="container">
+                <div>
+                    <label for="city">City
+                        <br><input type="text" id="city" size="40" style="height: 40px;">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="pin">Pincode
+                        <br><input type="tel" id="pin" size="40" style="height: 40px;">
+                    </label>
+                </div>
+
+            </section>
+
+            <section class="container">
+                <div>
+                    <label for="date">Start Date
+                        <br><input type="date" id="date" size="40" style="height: 40px; width: 340px;">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="cv">CV
+                        <br><input type="file" id="cv"  style="height: 40px; width: 340px; border: 1px solid black; background-color: white; padding-left: 80px; padding-top: 3px;">
+                    </label>
+                </div>
+
+            </section>
+
+            <section>
+                <button class="btn">Apply Now</button>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
